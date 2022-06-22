@@ -16,5 +16,5 @@ steps:
   inputs:
     script: |
       wi -u https://petstore.swagger.io/v2/swagger.json -api Swagger -n "petstore" -CrawlCoverage Default -ps 1044 -r "Aggregate;Executive Summary;Developer Reference" -y Standard -f "C:\webinspect\petstore\report.pdf" -gp -ep ""C:\webinspect\petstore\output.fpr" -v
-      && fortifyclient -url https://34.193.130.215:8443/ssc -authtoken 8a88efe1-c17e-421c-9ffc-d6e8a08737ec uploadFPR -file "C:\webinspect\petstore\output.fpr" -project "petstore" -version petstore-azure
+      fortifyclient -url https://34.193.130.215:8443/ssc -authtoken 8a88efe1-c17e-421c-9ffc-d6e8a08737ec uploadFPR -file "C:\webinspect\petstore\output.fpr" -project "petstore" -version petstore-azure
       
